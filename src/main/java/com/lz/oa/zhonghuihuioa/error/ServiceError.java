@@ -13,6 +13,11 @@ public enum  ServiceError implements IError {
     ROLE_NAME_NOT_NULL("1002", "角色名不能为空"),
     ROLE_STATUS_NOT_NULL("1003", "角色状态不能为空"),
     ROLE_NOT_FOUND("1004", "没有找到对应的角色"),
+    ACCOUNT_USERNAME_EXIST("1005", "用户名已经存在"),
+    ACCOUNT_PHONE_EXIST("1006", "电话号码已经存在"),
+    ACCOUNT_USERNAME_NOT_NULL("1007", "用户名不能为空"),
+    ACCOUNT_PASSWORD_NOT_NULL("1008", "密码不能为空"),
+    ACCOUNT_PHONE_NOT_NULL("1009", "电话号码不能为空"),
 
 
     ;

@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: zhonghuihui-oa
+  profiles:
+    active: dev
+
+server:
+  port: ${server-port:9003}

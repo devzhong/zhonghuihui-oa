@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lz.oa.zhonghuihuioa.dao.GroupDao">
+    <insert id="create" parameterType="com.lz.oa.zhonghuihuioa.po.GroupPO">
+        insert into group (uuid, desc, personIds, systemId, status, isEdit, createTime, updateTime)
+        values (#{uuid}, #{desc}, #{personIds}, #{systemId}, #{status}, #{isEdit}, #{createTime}, #{updateTime})
+    </insert>
+    <delete id="delete" parameterType="java.lang.String">
+        delete from group
+        where uuid = #{uuid}
+    </delete>
+    <select id="findByUuid" parameterType="java.lang.String" resultType="com.lz.oa.zhonghuihuioa.po.GroupPO">
+        select * from group
+        where uuid = #{uuid}
+    </select>
+    <select id="all" parameterType="com.lz.oa.zhonghuihuioa.vo.search.SearchGroupVO" resultType="com.lz.oa.zhonghuihuioa.po.GroupPO">
+        select * from group
+        where systemId =#{uuid}
+    </select>
+</mapper>

@@ -17,7 +17,6 @@ public interface RoleDao {
 
     void create(RolePO rolePO);
     void update(RolePO rolePO);
-    //void delete(String uuid);
     RolePO findByUuid(String uuid);
     RolePO findByName(String name);
     List<RolePO> all(SearchRoleVO vo, Page page);

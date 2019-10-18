@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lz.oa.zhonghuihuioa.dao.AccountDao">
+    <insert id="create" parameterType="com.lz.oa.zhonghuihuioa.po.AccountPO">
+        insert into account (uuid, username, password, createTime, updateTime)
+        values (#{uuid}, #{username}, #{password}, #{createTime}, #{updateTime})
+    </insert>
+    <delete id="delete" parameterType="java.lang.String">
+        delete from account
+        where uuid = #{uuid}
+    </delete>
+    <select id="findByUuid" parameterType="java.lang.String" resultType="com.lz.oa.zhonghuihuioa.po.AccountPO">
+        select * from account
+        where uuid = #{uuid}
+    </select>
+
+</mapper>

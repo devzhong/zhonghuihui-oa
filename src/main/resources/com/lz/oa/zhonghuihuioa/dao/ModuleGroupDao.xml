@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lz.oa.zhonghuihuioa.dao.ModuleGroupDao">
+    <insert id="create" parameterType="com.lz.oa.zhonghuihuioa.po.ModuleGroupPO">
+        insert into module_group (uuid, moduleId, groupId, createTime, updateTime)
+        values (#{uuid}, #{moduleId}, #{groupId}, #{createTime}, #{updateTime})
+    </insert>
+    <delete id="delete" parameterType="java.lang.String">
+        delete from module_group
+        where uuid = #{uuid}
+    </delete>
+    <select id="findByUuid" parameterType="java.lang.String">
+        select * from module_group
+        where uuid = #{uuid}
+    </select>
+
+</mapper>

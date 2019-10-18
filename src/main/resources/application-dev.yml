@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    url: jdbc:mysql://${mysql_host:rm-bp1dxkgb76wpi4ym87o.mysql.rds.aliyuncs.com}:${mysql_port:3306}/${mysql_db:oa}?characterEncoding=utf8
+    username: ${mysql_username:root}
+    password: ${mysql_passwd:19921205ZJb}
+    driver-class-name: com.mysql.jdbc.Driver
+
+logging:
+  level:
+    com.lz.oa.zhonghuihuioa.dao: debug
+    root: ${loggingLevel:info}
